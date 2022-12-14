@@ -22,7 +22,8 @@
     "noImplicitAny": true,
     "removeComments": true,
     "strictNullChecks": true,
-    "sourceMap": true
+    "sourceMap": true,
+    "baseUrl": "src"
   },
   "include": [
     "src"

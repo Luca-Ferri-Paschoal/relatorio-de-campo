@@ -1,0 +1,15 @@
+@import 'styles/vars.scss';
+
+.logo {
+    display: flex;
+    align-items: flex-end;
+
+    &__logoTipo {
+        width: 70px;
+    }
+
+    &__titulo {
+        font-weight: 900;
+        color: $white;
+    }
+}
