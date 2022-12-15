@@ -4,12 +4,22 @@
     display: flex;
     align-items: flex-end;
 
-    &__logoTipo {
+    &__logoType {
         width: 70px;
+
+        @media screen and (max-width: $cell) {
+            width: 35px;
+        }
     }
 
-    &__titulo {
+    &__title {
         font-weight: 900;
         color: $white;
+        font-size: $fontPC * 2;
+        
+        @media screen and (max-width: $cell) {
+            width: 35px;
+            font-size: $fontCell * 2;
+        }
     }
 }

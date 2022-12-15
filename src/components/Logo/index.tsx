@@ -4,8 +4,8 @@ import style from './Logo.module.scss';
 const Logo = () => {
     return (
         <div className={style.logo}>
-            <LogoTipo className={style.logo__logoTipo}/>
-            <h1 className={style.logo__titulo}>Relatório</h1>
+            <LogoTipo className={style.logo__logoType}/>
+            <h1 className={style.logo__title}>Relatório</h1>
         </div>
     );
 }

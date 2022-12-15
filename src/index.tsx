@@ -1,6 +1,6 @@
+import { RelationProvider } from 'common/context/RelationContext';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import 'normalize.css';
 import './index.scss';
 import Initial from './pages/Initial';
 
@@ -10,6 +10,8 @@ const root = ReactDOM.createRoot(
 
 root.render(
 	<React.StrictMode>
-		<Initial></Initial>
+		<RelationProvider>
+			<Initial/>
+		</RelationProvider>
 	</React.StrictMode>
 );
