@@ -1,48 +1,5 @@
 @import 'styles/vars.scss';
 
 .totals {
-    display: flex;
-    justify-content: space-between;
     padding: 20px 50px;
-
-    @media screen and (max-width: $cell) {
-        padding: 10px;
-    }
-
-    &__hrs {
-        font-size: $fontPC * 1.5;
-        font-weight: 700;
-
-        display: flex;
-        align-items: flex-end;
-
-        @media screen and (max-width: $cell) {
-            font-size: $fontCell * 1.5;
-        }
-    }
-
-    &__statistics {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 50px 50px;
-
-        
-        @media screen and (max-width: $cell) {
-            grid-template-rows: 25px 25px;
-        }
-    
-        & > div {
-            width: 100%;
-            height: 100%;
-    
-            display: flex;
-            justify-content: flex-end;
-            align-items: flex-end;
-            font-size: $fontPC * 1.2;
-
-            @media screen and (max-width: $cell) {
-                font-size: $fontCell * 1.2;
-            }
-        }
-    }
 }

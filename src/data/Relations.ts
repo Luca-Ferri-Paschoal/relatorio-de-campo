@@ -1,4 +1,5 @@
 import { IRelation } from 'interfaces/IRelation';
+import uniqid from 'uniqid';
 
 const Relations: IRelation[] = [
     {
@@ -7,6 +8,7 @@ const Relations: IRelation[] = [
         rv: 4,
         vid: 2,
         bs: 1,
+        id: uniqid(),
     },
     {
         hrs: 10,
@@ -14,6 +16,7 @@ const Relations: IRelation[] = [
         rv: 4,
         vid: 2,
         bs: 1,
+        id: uniqid(),
     },
     {
         hrs: 10,
@@ -21,6 +24,7 @@ const Relations: IRelation[] = [
         rv: 4,
         vid: 2,
         bs: 1,
+        id: uniqid(),
     },
     {
         hrs: 10,
@@ -28,6 +32,7 @@ const Relations: IRelation[] = [
         rv: 4,
         vid: 2,
         bs: 1,
+        id: uniqid(),
     },
     {
         hrs: 10,
@@ -35,6 +40,7 @@ const Relations: IRelation[] = [
         rv: 4,
         vid: 2,
         bs: 1,
+        id: uniqid(),
     },
     {
         hrs: 10,
@@ -42,6 +48,7 @@ const Relations: IRelation[] = [
         rv: 4,
         vid: 2,
         bs: 1,
+        id: uniqid(),
     },
     {
         hrs: 10,
@@ -49,6 +56,7 @@ const Relations: IRelation[] = [
         rv: 4,
         vid: 2,
         bs: 1,
+        id: uniqid(),
     },
     {
         hrs: 10,
@@ -56,6 +64,7 @@ const Relations: IRelation[] = [
         rv: 4,
         vid: 2,
         bs: 1,
+        id: uniqid(),
     },
 ];
 
