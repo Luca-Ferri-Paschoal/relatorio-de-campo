@@ -5,18 +5,35 @@ body {
 	background-color: $white;
 }
 
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 400;
+	color: $black;
+	font-size: $fontPC;
+
+	@media screen and (max-width: $cell) {
+		font-size: $fontCell;
+	}
+}
+
 * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	color: $black;
 	font-family: 'Comfortaa', cursive;
+	outline: 0;
+	background: transparent;
+	border: none;
 }
 
 #root {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
-	font-size: $fontPC;
 	font-weight: 400;
+	color: $black;
+	font-size: $fontPC;
+
+	@media screen and (max-width: $cell) {
+		font-size: $fontCell;
+	}
 }

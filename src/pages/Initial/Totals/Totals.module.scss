@@ -2,4 +2,22 @@
 
 .totals {
     padding: 20px 50px;
+
+    & > div > div > span {
+        font-size: $fontPC * 1.5;
+        font-weight: 700;
+
+        @media screen and (max-width: $cell) {
+            font-size: $fontCell * 1.5;
+        }
+    }
+
+    & > div > div > div > span {
+        font-size: $fontPC * 1;
+        color: $grey;
+
+        @media screen and (max-width: $cell) {
+            font-size: $fontCell * 1;
+        }
+    }
 }

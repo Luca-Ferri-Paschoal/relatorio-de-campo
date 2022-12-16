@@ -1,5 +1,6 @@
 import { useRelationContext } from 'common/context/RelationContext';
 import Relation from 'components/Relation';
+import style from './Relations.module.scss';
 
 const Relations = () => {
     const {
@@ -7,12 +8,18 @@ const Relations = () => {
     } = useRelationContext();
 
     return (
-        <section>
+        <section
+            className={style.relations}
+        >
             {relations.map(relation => 
-                <Relation
+                <div
+                    className={style.relations__relation}
                     key={relation.id}
-                    { ...relation }
-                />    
+                >
+                    <Relation
+                        { ...relation }
+                    />    
+                </div>
             )}
         </section>
     );

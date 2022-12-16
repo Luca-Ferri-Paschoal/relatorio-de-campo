@@ -6,10 +6,10 @@ Header {
     padding: 10px;
 
     width: 100vw;
-    height: 100px;
+    height: $headerHeightPC;
     background-color: $blue;
 
     @media screen and (max-width: $cell) {
-        height: 50px;
+        height: $headerHeightCell;
     }
 }

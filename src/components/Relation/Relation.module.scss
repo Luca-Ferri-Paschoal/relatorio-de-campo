@@ -9,14 +9,13 @@
     }
 
     &__hrs {
-        font-size: $fontPC * 1.3;
-        font-weight: 700;
-
         display: flex;
         align-items: flex-end;
 
+        font-size: $fontPC * 1.2;
+
         @media screen and (max-width: $cell) {
-            font-size: $fontCell * 1.3;
+            font-size: $fontCell * 1.2;
         }
     }
 
@@ -37,10 +36,11 @@
             display: flex;
             justify-content: flex-end;
             align-items: flex-end;
-            font-size: $fontPC * 1;
 
+            font-size: $fontPC * 0.9;
+    
             @media screen and (max-width: $cell) {
-                font-size: $fontCell * 1;
+                font-size: $fontCell * 0.9;
             }
         }
     }

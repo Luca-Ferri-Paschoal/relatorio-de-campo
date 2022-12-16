@@ -1,4 +1,5 @@
 import { IRelation } from 'interfaces/IRelation';
+import { memo } from 'react';
 import style from './Relation.module.scss';
 
 const Relation = ({
@@ -9,7 +10,7 @@ const Relation = ({
     bs
 }: IRelation) => { 
     return (
-        <section
+        <div
             className={style.relation}
         >
             <div
@@ -33,8 +34,8 @@ const Relation = ({
                     <span>Estudos: {bs}</span>
                 </div>
             </div>
-        </section>
+        </div>
     );
 }
  
-export default Relation;
+export default memo(Relation);

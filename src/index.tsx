@@ -1,4 +1,5 @@
 import { RelationProvider } from 'common/context/RelationContext';
+import Header from 'components/Header';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.scss';
@@ -11,7 +12,10 @@ const root = ReactDOM.createRoot(
 root.render(
 	<React.StrictMode>
 		<RelationProvider>
-			<Initial/>
+			<>
+				<Header />
+				<Initial />
+			</>
 		</RelationProvider>
 	</React.StrictMode>
 );

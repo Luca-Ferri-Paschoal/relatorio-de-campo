@@ -1,0 +1,38 @@
+@import 'styles/vars.scss';
+
+.counter {
+    width: 240px;
+    display: flex;
+    justify-content: space-between;
+
+    &__alignRight {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    &__alignLeft {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    &__buttonIcon {
+        width: $fontPC * 1.2;
+        height: $fontPC * 1.2;
+        cursor: pointer;
+    
+        @media screen and (max-width: $cell) {
+            width: $fontCell * 1.2;
+            height: $fontCell * 1.2;   
+        }
+    }
+}
+
+.minusCircle {
+    color: $red;
+}
+
+.plusCircle {
+    color: $green;
+}

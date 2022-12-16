@@ -1,5 +1,15 @@
-.red {
-    width: 100px;
-    height: 100px;
-    background-color: red;
+@import 'styles/vars.scss';
+
+.initial {
+    display: flex;
+    height: calc(100vh - $headerHeightPC);
+    
+    &__relation {
+        width: 50%;
+        border-right: 1px solid $light-grey;
+    }
+    
+    &__addRelation {
+        width: 50%;
+    }
 }

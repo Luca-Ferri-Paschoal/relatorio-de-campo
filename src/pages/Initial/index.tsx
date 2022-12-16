@@ -1,14 +1,18 @@
-import Header from 'components/Header';
+import AddRelation from 'pages/AddRelation';
 import Relations from './Relations';
 import Totals from './Totals';
-// import style from './Initial.module.scss';
+import style from './Initial.module.scss';
 
 const Initial = () => {
     return (
-        <section>
-            <Header/>
-            <Totals/>
-            <Relations/>
+        <section className={style.initial}>
+            <main className={style.initial__relation}>
+                <Totals/>
+                <Relations/>
+            </main>
+            <aside className={style.initial__addRelation}>
+                <AddRelation/>
+            </aside>
         </section>
     );
 }

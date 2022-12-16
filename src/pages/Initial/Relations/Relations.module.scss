@@ -1,0 +1,10 @@
+@import 'styles/vars.scss';
+
+.relations {
+    padding: 20px 100px;
+
+    &__relation {
+        padding-bottom: 10px;
+        border-bottom: 1px solid $light-grey;
+    }
+}

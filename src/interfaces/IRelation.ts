@@ -20,4 +20,4 @@ export const relation0: IRelation = {
     id: uniqid(),
 }
 
-export const attrs = Object.keys(relation0) as  IRelationAttr[]; 
+export const attrs: IRelationAttr[] = ['hrs', 'pub', 'vid', 'rv', 'bs']; 

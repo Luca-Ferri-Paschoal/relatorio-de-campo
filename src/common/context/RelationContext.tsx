@@ -1,13 +1,14 @@
 import {
     IRelation,
     relation0,
-    attrs
+    attrs,
+    IRelationAttr
 } from 'interfaces/IRelation';
 import {
     createContext,
     useState,
     useContext,
-    useEffect
+    useEffect,
 } from 'react';
 import DataRelations from 'data/Relations';
 
@@ -16,6 +17,8 @@ interface Value {
     setRelations: React.Dispatch<React.SetStateAction<IRelation[]>>
     relationTotal: IRelation;
     setRelationTotal: React.Dispatch<React.SetStateAction<IRelation>>
+    newRelation: IRelation;
+    setNewRelation: React.Dispatch<React.SetStateAction<IRelation>>
 }
 
 export const RelationContext = createContext<Value | null>(null);
@@ -34,6 +37,11 @@ export const RelationProvider = (props: {
         setRelationTotal
     ] = useState<IRelation>(relation0);
 
+    const [
+        newRelation,
+        setNewRelation
+    ] = useState<IRelation>(relation0);
+
     return (
         <RelationContext.Provider
             value={{
@@ -41,6 +49,8 @@ export const RelationProvider = (props: {
                 setRelations,
                 relationTotal,
                 setRelationTotal,
+                newRelation,
+                setNewRelation,
             }}
         >
             {props.children}
@@ -51,9 +61,8 @@ export const RelationProvider = (props: {
 export const useRelationContext = () => {
     const {
         relations,
-        setRelations,
         relationTotal,
-        setRelationTotal
+        setRelationTotal,
     } = useContext(RelationContext) as Value;
 
     useEffect(() => {
@@ -72,11 +81,64 @@ export const useRelationContext = () => {
             return total;
         })
     }
-        , [relations, setRelationTotal]
+        , [relations]
     );
 
     return {
         relations,
-        relationTotal
+        relationTotal,
+    }
+}
+
+export const useCreatingNewRelation = (
+    attr: IRelationAttr
+) => {
+    const {
+        newRelation,
+        setNewRelation,
+    } = useContext(RelationContext) as Value;
+
+    const newRelationAttr = newRelation[attr];
+
+    const editNewRelation = (attr: IRelationAttr, value: number) => {
+        setNewRelation(olderRelation => {
+            const newRelation = { ...olderRelation };
+
+            if (value === 1 || (value === -1 && newRelation[attr] >= 1)) {
+                newRelation[attr] += value;
+            }
+
+            return newRelation;
+        });
+    };
+
+    const add = () => editNewRelation(attr, 1);
+
+    const remove = () => editNewRelation(attr, -1);
+
+    return {
+        newRelationAttr,
+        add,
+        remove,
+    }
+}
+
+export const useAddingNewRelation = () => {
+    const {
+        setRelations,
+        newRelation,
+        setNewRelation
+    } = useContext(RelationContext) as Value;
+
+    const addRelation = () => {
+        setRelations(
+            relations => [...relations, newRelation]
+        );
+
+        setNewRelation({ ...relation0 });
+    };
+
+    return {
+        addRelation
     }
 }
